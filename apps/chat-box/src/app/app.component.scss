@@ -1,0 +1,17 @@
+.container {
+    &__users_wrapper {
+        overflow-y: scroll;
+        max-height: 100vh;
+        border: 1px solid black;
+        padding: 5px;
+        &__header {
+            margin: 0;
+        }
+    }
+}
+
+:host {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+}

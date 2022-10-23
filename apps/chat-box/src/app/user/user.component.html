@@ -1,0 +1,7 @@
+<div class="user_wrapper" [ngClass]="{'active': user.id === this.userId}">
+    <img class="user_wrapper__img" src="../../assets/IMG/user.jpg" alt="user photo">
+    <div class="user_wrapper__profile">
+        <p class="user_wrapper__profile__name">{{ user.name}}</p>
+        <p class="user_wrapper__profile__message">{{lastMessages$ |   async | truncate}}</p>
+    </div>
+</div>

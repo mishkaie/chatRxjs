@@ -1,0 +1,27 @@
+.user_wrapper {
+    border: 1px solid rgb(172, 167, 167);
+    display: flex;
+    min-height: 10vh;
+    max-height: 20vh;
+    min-width: 30vw;
+    max-width: 30vw;
+    &__img {
+        max-height: 100px;
+    }
+    
+    &__profile {
+        &__message {
+            color: rgb(87, 87, 87);
+            padding-top: 10px;
+        }
+        &__name {
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            padding-top: 5px;
+        }
+    }
+}
+
+.active {
+    background-color: rgb(231 234 233);
+}

@@ -1,0 +1,23 @@
+<div class="chat" *ngIf="(currentUser$ | async) as crUser; else sentMessage">
+        <h2>{{crUser.name}}</h2>
+        <div class="chat__messages">
+            <ng-container *ngIf="(messages$ | async) as userMsgs">
+                <ng-container *ngFor="let users of userMsgs ">
+                    <ng-container *ngIf="users.userId == chatId">
+                        <div 
+                        *ngFor="let umessage of users.messages" class="chat__messages__message"
+                         [ngClass]="{'user': umessage.id === 1, 'bot': umessage.id === 0}">
+                            <p>
+                                {{ umessage.message }}
+                            </p>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+        </div>
+        <input type="text" class="chat__input" placeholder="Reply..." (keydown.enter)="sendMessage()" [formControl]="messageController">
+</div>
+
+<ng-template #sentMessage>
+    <h2>Selecte user and send message</h2>
+</ng-template>

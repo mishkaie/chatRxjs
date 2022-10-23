@@ -1,0 +1,40 @@
+.chat {
+    height: 100%;
+    &__messages {
+        min-height: 80vh;
+        max-height: 80vh;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5px;
+        &__message {
+            display: grid;
+            word-break: break-all;
+            color: white;
+            border-radius: 16px;
+            margin-top: 1px;
+            p {
+                padding: 5px;
+            }
+        }
+    }
+    &__input {
+        width: 100%;
+        background-color: rgb(238, 238, 238);
+        border-radius: 2px;
+        min-height: 3rem;
+        padding: 0;
+    }
+}
+
+.user {
+    justify-content: end;
+    margin-left: 50%;
+    background-color: gray;
+}
+
+.bot {
+    justify-content: start;
+    background-color: rgb(226, 82, 82);
+    margin-right: 50%;
+}
