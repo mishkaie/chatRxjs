@@ -3,7 +3,7 @@
     <ng-container *ngIf="users$ | async as users;">
         <div class="container__users_wrapper">
             <h2 class="container__users_wrapper__header">Messages</h2>
-            <div *ngFor="let user of users; let i = index; trackBy: trackByFn" (click)="openUserChat(user.id, i)" >
+            <div *ngFor="let user of users; let i = index; trackBy: trackByFn" (click)="openUserChat(user.id)" >
                 <chat-box-user [user]="user"></chat-box-user>
             </div>
         </div>

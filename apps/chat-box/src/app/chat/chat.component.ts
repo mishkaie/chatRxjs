@@ -29,10 +29,9 @@ export class ChatComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
   ) {}
-  // currentUser$!: Observable<User>;
 
-  /* combine streams of user and params
-    
+  /* combine streams of userს and params
+     to find current user
   */
   currentUser$: Observable<User> | Observable<any>  = combineLatest([
     this.users$,
@@ -88,7 +87,7 @@ export class ChatComponent implements OnInit {
   }
   
   /* 
-    update messageSubjectValue with given messages 
+    update messageSubjectValue with given messages
   */
   updateSubjectValue(userOrBot: userOrBot, msgValue: string | any, chatId: number) {
     const msg = {

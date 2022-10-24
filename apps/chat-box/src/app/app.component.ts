@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     );
   }
   
-  openUserChat(id: number, index: number) {
+  openUserChat(id: number) {
     this.router.navigateByUrl(`/user/${id}`);
   }
 
